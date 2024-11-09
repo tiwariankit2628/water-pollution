@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="icon/png" href="favicon.png">
+	<title>Pollution Awareness</title>
+</head>
+
+<body>
+<section class="first">
+
+								<!--LANDING PAGE-->
+
+<!--Resources-->
+	<div class="bannerVideo" id="slideShow">
+		<video src="D:\HTML\Website Pollution\Videos\video1.mp4" autoplay muted loop class="active" type="video/mp4"></video>
+		<video src="D:\HTML\Website Pollution\Videos\video2.mp4" autoplay muted loop></video>
+		<video src="D:\HTML\Website Pollution\Videos\video3.mp4" autoplay muted loop></video>
+		<!--<video src="video4.mp4" autoplay muted loop></video>-->
+	</div>
+
+<!-- Navbar -->
+	<div class="container">
+		<header id="navbar">
+			<a href="#" class="logo">Pollution</a>
+			<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<!--<li><a href="#">Newsroom</a></li>
+				<li><a href="#" >Events</a></li>-->
+				<li><a href="#aboutus">About Us</a></li>
+				<li><a href="#aboutus">Contact Us</a></li>
+				<li><a href="login.html">Log In / Sign Up</a></li>
+			</ul>
+			<span class="menuIcon" onclick="toggleMenu();"></span>
+		</header>
+
+<!--Video Intro-->
+		<div class="content">
+			<div class="bannerText" id="slideShowText">
+				<div class="active">
+					<h2>Water Pollution</h2>
+					<p>Water pollution (or aquatic pollution) is the contamination of water bodies, usually as a result of human activities, in such a manner that negatively affects its legitimate uses. Water pollution reduces the ability of the body of water to provide the ecosystem services that it would otherwise provide.</p>
+					<a href="#water" class="readmore">Read More</a>				
+				</div>
+				<div>
+					<h2>Types of Water Pollution</h2>
+					<p>Water pollution occurs when harmful substances contaminate water bodies, affecting the ecosystem, human health, and the environment. There are several types of water pollution, each defined by the source and nature of contaminants. Here’s an overview of the main types:</p>
+					<a href="#land" class="readmore">Read More</a>
+				</div>
+				
+			</div>
+		</div>
+
+<!--Arrow Controls-->
+		<ul class="controls">
+			<li onclick="prevSlide();prevSlideText();"><img src="left.png"></li>
+			<li onclick="nextSlide();nextSlideText();"><img src="right.png"></li>
+		</ul>
+	</div>
+</section>
+
+<!--Arrow Controls-->
+<script type="text/javascript">
+	const slideShow = document.getElementById('slideShow');
+	const slides = slideShow.getElementsByTagName('video');
+	var index = 0;
+	function nextSlide(){
+		slides[index].classList.remove('active');
+		index = (index + 1) % slides.length;
+		slides[index].classList.add('active');
+	}
+	function prevSlide(){
+		slides[index].classList.remove('active');
+		index = (index - 1 + slides.length) % slides.length;
+		slides[index].classList.add('active');
+	}
+
+
+    const slideShowText = document.getElementById('slideShowText');
+	const slidesText = slideShowText.getElementsByTagName('div');
+	var i = 0;
+	function nextSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i + 1) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function prevSlideText(){
+		slidesText[i].classList.remove('active');
+		i = (i - 1 + slidesText.length) % slidesText.length;
+		slidesText[i].classList.add('active');
+	}
+	function toggleMenu(){
+		const menuIcon = document.querySelector('.menuIcon');
+		const navbar = document.getElementById('navbar');
+		menuIcon.classList.toggle('active');
+		navbar.classList.toggle('active');
+	}
+</script>
+
+							
+
+							
+<section class="third">
+		<div class="water">
+				<a name = "water" class="water"><h1>Water Pollution</h1></a>
+				<p class="descw">Water pollution occurs when harmful substances—often chemicals or microorganisms—contaminate a stream, river, lake, ocean, aquifer, or other body of water, degrading water quality and rendering it toxic to humans or the environment.</p>
+				<div class="totalwater">
+					<div class="proswater">
+						<h3>Causes</h3>
+						<p>Water is uniquely vulnerable to pollution. Known as a “universal solvent,” water is able to dissolve more substances than any other liquid on earth. Water pollution can usually be attributed to one of four sources: sewage, industry, agriculture, and urban runoff including stormwater. For example, releasing inadequately treated wastewater into natural waters can lead to degradation of these aquatic ecosystems. Water pollution can also lead to water-borne diseases for people using polluted water for drinking, bathing, washing or irrigation.</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Preventions</h3>
+						<p>Reduce your plastic consumption and reuse or recycle plastic when you can.
+							Properly dispose of chemical cleaners, oils, and nonbiodegradable items to keep them from going down the drain.
+							Maintain your car so it does not leak oil, antifreeze, or coolant. Be mindful of anything you pour into storm sewers, since that waste often won’t be treated before being released into local waterways. If you notice a storm sewer blocked by litter, clean it up to keep that trash out of the water.
+							Don't put fertilizer on the grass right before it rains. The chemicals will wash into storm drains and waterways.
+						</p>
+					</div>
+								
+					<div class="proswater">
+						<h3>Facts</h3>
+						<p>Approximately 785 million people in the world do not have access to clean drinking water because of pollution. Around 70% of the industrial waste is dumped into the water bodies where they pollute the usable water supply. Industry dumps an estimated 300-400 MT of polluted waste into water bodies every year. It includes millions of tonnes of heavy metals, solvents, toxic sludge and other wastes. Fourteen billion pounds of garbage, mostly plastic, is dumped into the ocean every year. 15 million children under the age of five die each year because of diseases caused by drinking water</p>
+					</div>		
+				</div>
+		</div>
+</section>
+
+										<!--LAND PAGE-->
+
+<section class="fourth">
+	<div class="land">
+		<a name = "land" class="land"><h1>Types of Water Pollution</h1></a>
+		<p class="desc">Water pollution occurs when harmful substances contaminate water bodies, affecting the ecosystem, human health, and the environment. There are several types of water pollution, each defined by the source and nature of contaminants.</p>
+			<div class="totalland">
+				<div class="prosland">
+					<h3>Chemical Pollution</h3>
+					<p>Chemical pollutants include heavy metals (such as lead, mercury, and arsenic), agricultural chemicals (fertilizers and pesticides), and industrial discharge. These substances can accumulate in aquatic organisms and enter the food chain, causing toxic effects in humans and wildlife.<br>
+						<b>Researches</b>
+						<p>* Research by Alloway (1995) highlights the dangers posed by heavy metals such as lead, mercury, cadmium, and arsenic, which can accumulate in aquatic organisms and bioaccumulate in the food chain. </p>
+					</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Biological Pollution</h3>
+					<p>Biological pollution is caused by pathogens from sewage and agricultural runoff, leading to diseases such as cholera, dysentery, and hepatitis. The presence of bacteria, viruses, and protozoa in water can severely impact public health.According to the World Health Organization (WHO, 2018), approximately 2 billion people lack access to safe drinking water, leading to outbreaks of diseases like cholera and typhoid.Studies have demonstrated the presence of fecal indicator bacteria, such as E. coli, in polluted water, signaling contamination and potential health risks.
+					</p>
+				</div>
+
+				<div class="prosland">
+					<h3>Thermal Pollution</h3>
+					<p>Thermal pollution occurs when water bodies are heated by industrial processes, power plants, or other sources, leading to changes in temperature and ecosystem disruption. This can affect aquatic life and disrupt the natural balance of water bodies.Thermal pollution results from industrial processes that discharge heated water into natural water bodies, which can decrease oxygen levels and alter aquatic life cycles.A study by Matz et al. (2010) highlights how thermal pollution disrupts the reproductive cycles of fish and decreases dissolved oxygen levels in water.
+
+					</p>
+				</div>
+			
+			</div>
+			
+	</div>
+</section>
+<section class="second">
+	<div class="air">
+		<a name = "air" class="air"><h1>Effects of Water Pollution</h1></a>
+		<p class="desca">Water Pollution has extensive impacts on ecosystems,human health,economics,aqatic life,Habitat degradation,Social and cultural impact(Resource conflicts and cultural degradation) and effects on drinking water quality.</p>
+		<div class="totalair">
+			<div class="prosair">
+				<h3>Human Health Risks</h3>
+				<p><b>Waterbone Diseases:</b>Contaminants, including bacteria (like E. coli), viruses, and parasites, can cause diseases like cholera, dysentery, and hepatitis. These illnesses are especially prevalent in areas with poor sanitation, where people may use contaminated water for drinking and cooking. <br><br><b>Chemical Contamination:</b> Chemicals like lead, arsenic, and mercury can accumulate in human bodies, causing long-term health issues, including neurological damage, developmental delays in children, and cancers.</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Ecosystem Damage</h3>
+				<p><b>Aquatic Life:</b>Pollutants, such as heavy metals, pesticides, and industrial chemicals, are toxic to aquatic organisms. These contaminants can impair growth, cause reproductive issues, and even lead to the extinction of sensitive species.<br><br><b>Biodiversity Loss:</b>Polluted water can disrupt food chains. When primary producers, like algae and plants, are affected by pollutants, it impacts organisms at all levels of the food web, reducing biodiversity and resilience within ecosystems.</p>
+			</div>
+
+			<div class="prosair">
+				<h3>Economic Impact</h3>
+				<p><b>Healthcare Costs:</b>Treating waterborne illnesses and health problems due to contaminated water puts financial strain on individuals and healthcare systems, especially in developing countries.<br><br><b>Agricultural Impact:</b> Polluted water used for irrigation can reduce crop yields or introduce contaminants into the food supply. Heavy metals and toxic pollutants from contaminated water can accumulate in crops, harming human consumers and resulting in financial losses for farmers.</p>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<h1 class="heading">SAVE WATER SAVE LIFE</h1>
+
+
+                        <!--FOOTER-->
+<section class="footer">
+	<a name="aboutus" class="aboutus"></a>
+		<h4>About Us</h4>
+		<p>We are students of section 2K24RP, <br> trying to spread awareness in the world about the rising water pollution.</p>
+		<br>
+		<p>Contact Us ↓</p>
+		<p><a href="mailto:tiwariankit0543@gmail.com">tiwariankit0543@gmail.com</a></p>
+		<p><a href="mailto:namanupadhyay631@gmail.com">namanupadhyay631@gmail.com</a></p>
+		<p><a href="mailto:laharee2006@gmail.com">laharee2006@gmail.com</a></p>
+		<br>
+		<p>Made by Ankit Tiwari & Naman Upadhaya & Uthayasuba Lahare</p>
+	</section>
+
+</body>
+</html>
